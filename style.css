@@ -1,0 +1,38 @@
+body {
+    background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.5); /* Adding a semi-transparent white background for blur effect */
+    backdrop-filter: blur(10px); /* Applying the blur effect */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px; /* Adjusted button padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Reduced button font size */
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Position the button absolutely */
+    right: 10px; /* Adjust the left position */
+    bottom: 10px; /* Adjust the top position */
+    margin-top: 40px;  
+    margin-left: 100px;
+}
+.highlight {
+    color: green; /* Highlight color */
+}
