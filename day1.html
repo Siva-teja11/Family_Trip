@@ -10,6 +10,7 @@
         background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
         background-size: cover;
         background-position: center;
+        font-weight: bold;
         }
         .container {
             display: flex;
@@ -19,17 +20,69 @@
         }
         .card {
             background-color: rgba(255, 255, 255, 0.5); /* Adding a semi-transparent white background for blur effect */
-            backdrop-filter: blur(10px); /* Applying the blur effect */
+            
             padding: 20px;
             border-radius: 10px;
             text-align: center;
+            background-color: aliceblue;
         }
+        h1 ,h2 {
+        margin-left: 10px;
+        display: inline-block;
+        border-bottom: 1px solid black; /* This adds a solid black line below the h1 */
+    }
+    ul {
+            list-style-type: none;
+            /* Remove bullet points */
+            padding-left: 0;
+            /* Remove default padding */
+            text-align: center;
+            /* Align list items to the center */
+        }
+
+        li {
+            text-align: center;
+            margin-bottom: 10px;
+            /* Add spacing between list items */
+            font-size: 16px;
+            color: #333333;
+            display: flex;
+            /* Use flexbox for alignment */
+            align-items: center;
+            /* Align items vertically */
+            margin-left: 10px;
+        }
+        span {
+            display: inline-block;
+            margin-left: 10px;
+            text-align: center;
+            
+        }
+        img{
+            height: 300px;
+            width: 300px;
+            margin-left: 10dvh;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        
         </style>
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <h1>DAY 1</h1>
+            <h1>26-4-2024</h1>
+            <ul>
+                <li>TRAIN NUMBER : <span>12345</span></li>
+                <li>TRAIN NAME : <span>GODAVARI SUPER FAST EXPRESS</span> </li>
+                <li>START STATION : <span>VISAKHAPATNAM</span></li>
+                <li>DEPATURE : <span>7:00 PM</span> </li>
+                <li>DESTINATION : <span>AGRA</span></li>
+                <li>ARRIVAL TIME : <span>6:00 PM</span></li>
+                
+            </ul> 
+            <h2>PASSENGERS LIST :</h2>
+            <img src="images/WhatsApp Image 2024-02-19 at 8.57.25 PM.jpeg"/>
             <div class="row">
                 <div class="col text-center">
                     <a href="index_page.html" class="btn btn-danger">Back</a>
@@ -39,6 +92,6 @@
                 </div>
             </div>
         </div>
-       </div>
+    </div>
 </body>
 </html>
