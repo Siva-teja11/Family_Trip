@@ -7,10 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         body {
-        background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
-        background-size: cover;
-        background-position: center;
-        font-weight: bold;
+            background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
+            background-size: cover;
+            background-position: center;
+            font-weight: bold;
         }
         .container {
             display: flex;
@@ -20,18 +20,19 @@
         }
         .card {
             background-color: rgba(255, 255, 255, 0.5); /* Adding a semi-transparent white background for blur effect */
-            
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             background-color: aliceblue;
+            max-width: 80%; /* Limit the maximum width of the card */
+            margin: auto; /* Center the card horizontally */
         }
         h1 ,h2 {
-        margin-left: 10px;
-        display: inline-block;
-        border-bottom: 1px solid black; /* This adds a solid black line below the h1 */
-    }
-    ul {
+            margin-left: 10px;
+            display: inline-block;
+            border-bottom: 1px solid black; /* This adds a solid black line below the h1 */
+        }
+        ul {
             list-style-type: none;
             /* Remove bullet points */
             padding-left: 0;
@@ -58,13 +59,13 @@
             text-align: center;
             
         }
-        img{
-            height: 300px;
-            width: 300px;
-            margin-left: 10dvh;
-            margin-bottom: 20px;
-            border-radius: 10px;
+        .card img {
+            max-width: 100%;
+            height: auto;
+            max-height: 50vh; /* Limit the maximum height of the image */
+            margin: 20px 0; /* Adjust the margin for smaller screens */
         }
+
         
         </style>
 </head>
