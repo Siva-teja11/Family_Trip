@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellcome To our family Trip Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         body {
             background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
@@ -12,26 +14,35 @@
             background-position: center;
             font-weight: bold;
         }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
+
         .card {
-            background-color: rgba(255, 255, 255, 0.5); /* Adding a semi-transparent white background for blur effect */
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Adding a semi-transparent white background for blur effect */
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             background-color: aliceblue;
-            max-width: 80%; /* Limit the maximum width of the card */
-            margin: auto; /* Center the card horizontally */
+            max-width: 80%;
+            /* Limit the maximum width of the card */
+            margin: auto;
+            /* Center the card horizontally */
         }
-        h1 ,h2 {
+
+        h1,
+        h2 {
             margin-left: 10px;
             display: inline-block;
-            border-bottom: 1px solid black; /* This adds a solid black line below the h1 */
+            border-bottom: 1px solid black;
+            /* This adds a solid black line below the h1 */
         }
+
         ul {
             list-style-type: none;
             /* Remove bullet points */
@@ -53,37 +64,135 @@
             /* Align items vertically */
             margin-left: 10px;
         }
-        span {
-            display: inline-block;
-            margin-left: 10px;
-            text-align: center;
-            
-        }
+
+
         .card img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            max-height: 50vh; /* Limit the maximum height of the image */
-            margin: 20px 0; /* Adjust the margin for smaller screens */
+            /* Limit the maximum height of the image */
+            margin: 20px 0;
+            /* Adjust the margin for smaller screens */
+        }
+        .label-column::after {
+            content: ":";
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #000;
+            font-weight: 800;
         }
 
-        
-        </style>
+        .text p {
+            font-size: 15px;
+            color: #333;
+            margin: 0;
+            text-align: left;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .text span{
+            margin: 0px 20px;
+    display: block;
+            text-align: left;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="card">
-            <h1>26-4-2024</h1>
-            <ul>
-                <li>TRAIN NUMBER : <span>22801</span></li>
-                <li>TRAIN NAME : <span>MGR Chennai Central Weekly SF Express</span> </li>
-                <li>START STATION : <span>VISAKHAPATNAM</span></li>
-                <li>DEPATURE : <span>7:00 PM</span> </li>
-                <li>DESTINATION : <span>VIJAYAWADA JUNCTION</span></li>
-                <li>ARRIVAL TIME : <span>1:00 AM</span></li>
-                
-            </ul> 
+            <h1>26-04-2024</h1>
+            <div class="col-md-12">
+                <div class="row" style="margin:0px">
+                    <div class="col-4" style="position:relative;">
+                        <div class="text label-column ">
+                            <p>TRAIN NUMBER</p>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="text">
+                            <span>22801</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row" style="margin:0px">
+                    <div class="col-4" style="position:relative;">
+                        <div class="text label-column">
+                            <p>TRAIN NAME</p>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="text">
+                            <span>MGR Chennai Central Weekly SF Express</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row" style="margin: auto;">
+                    <div class="col-4" style="position:relative;">
+                        <div class="text label-column">
+                            <p>START STATION</p>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="text">
+                            <span>VISAKHAPATNAM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row" style="margin: auto;">
+                    <div class="col-4" style="position:relative;">
+                        <div class="text label-column">
+                            <p>DEPATURE</p>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="text">
+                            <span>7:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row" style="margin: auto;">
+                    <div class="col-4" style="position:relative;">
+                        <div class="text label-column">
+                            <p>DESTINATION</p>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="text">
+                            <span>VIJAYAWADA JUNCTION</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row" style="margin: auto;">
+                    <div class="col-4" style="position:relative;">
+                        <div class="text label-column">
+                            <p>ARRIVAL TIME</p>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="text">
+                            <span>1:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <h2>PASSENGERS LIST :</h2>
-            <img src="images/WhatsApp Image 2024-02-19 at 8.57.25 PM.jpeg"/>
+            <img src="images/WhatsApp Image 2024-02-19 at 8.57.25 PM.jpeg" />
             <div class="row">
                 <div class="col text-center">
                     <a href="index_page.html" class="btn btn-danger">Back</a>
@@ -95,4 +204,5 @@
         </div>
     </div>
 </body>
+
 </html>
