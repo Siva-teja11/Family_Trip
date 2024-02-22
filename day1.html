@@ -75,6 +75,7 @@
             margin: 20px 0;
             /* Adjust the margin for smaller screens */
         }
+
         .label-column::after {
             content: ":";
             position: absolute;
@@ -92,27 +93,30 @@
             margin-bottom: 10px;
             font-weight: 600;
         }
-        .text span{
+
+        .text span {
             margin: 0px 20px;
-    display: block;
+            display: block;
             text-align: left;
         }
 
-        
-        @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
 
-  .card{
-    max-width: 95%;
-  }
-  p{
-    font-size: 12px !important;
-  }
-  .text span{
-    font-size: 12px !important;
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+
+            .card {
+                max-width: 95%;
+            }
+
+            p {
+                font-size: 12px !important;
+            }
+
+            .text span {
+                font-size: 12px !important;
+            }
+
         }
-  
-}
     </style>
 </head>
 
