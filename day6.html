@@ -1,45 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellcome To our family Trip Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="day3.css" rel="stylesheet">
     <style>
         body {
-        background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
-        background-size: cover;
-        background-position: center;
+            background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
+            background-size: cover;
+            background-position: center;
+            font-weight: bold;
         }
+
         .container {
-            display: flex;
+            /* display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100vh; */
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
+
         .card {
-            background-color: rgba(255, 255, 255, 0.5); /* Adding a semi-transparent white background for blur effect */
-            backdrop-filter: blur(10px); /* Applying the blur effect */
-            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Adding a semi-transparent white background for blur effect */
+            padding: 10px;
             border-radius: 10px;
             text-align: center;
+            background-color: aliceblue;
+            max-width: 80%;
+            /* Limit the maximum width of the card */
+            margin: auto;
+            /* Center the card horizontally */
+
         }
-        </style>
+
+        h1,
+        h2,h4 {
+            margin: 0px !important;
+            display: inline-block;
+            border-bottom: 1px solid black;
+            /* This adds a solid black line below the h1 */
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+
+            .card {
+                max-width: 95%;
+            }
+
+            .text span {
+                font-size: 12px !important;
+            }
+
+            p {
+                font-size: 12px !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="card">
-            <h1>DAY6</h1>
+            <div class="card-header">
+                <h1 style="font-weight: bold;">01-05-2024</h1>
+                <h2 style="font-weight: bold;">Location : Srinagar-Sonmarg</h2>
+            </div>
+            <div class="card-content">
+                <div class="time">
+                    <ul style="padding-left: 0;">
+                        <li style="font-weight: bold; text-align: start; margin-bottom: 5px;">Breakfast</li>
+                        <li style="font-weight: bold; text-align: start; margin-bottom: 5px;">Check out from house boat
+                            Proceed to Excurssion trip to Sonmarg</li>
+                        <li style="font-weight: bold; text-align: start; margin-bottom: 5px;">The route towards Sonmarg takes us on a
+                            picturesque countryside
+                            drive where we will come across
+                            rolling hills, green forests, clear
+                            water streams and blooming rice
+                            fields.</li>
+
+                        <li style="font-weight: bold; text-align: start; margin-bottom: 5px;">In the evening drive back
+                            from Sonmarg to Srinagar and Check to Hotel</li>
+                        <li style="font-weight: bold; text-align: start; margin-bottom: 5px;">Emergency Numbers-<a
+                                href="https://www.kashmironline.com/top-destinations/sonamarg/safety-information/"
+                                target="_blank">Emergency Contacts</a></li><br>
+                        <p style="padding-left: 0px;"><span style="color: red; margin-right: 5px;">NOTE:</span>So some
+                            places
+                            may be Skipped according to our Time Schedule</p>
+                    </ul>
+
+                </div>
+                <div class="places">
+                    <h1 style="align-items: start;"> Top Places</h1>
+                    <h6 style="margin-top: 2%;"><span style="color: red;">NOTE:</span> Places are not fixed below are
+                        some example places in Sonmarg.</h6>
+                    <div class="place row">
+                        <div class="place-details col-md-6">
+                            <h4>Gadsar Lake</h4><br>
+                            <!-- <a class="google" href="#" target="_blank">Google Map Location</a> -->
+
+                        </div>
+                        <div class="place-image col-md-6">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/45/22/b7/amazing-view-of-gadsar.jpg?w=900&h=600&s=1"
+                                alt="Rolling Hills" class="img-fluid">
+                        </div>
+
+                        <div class="white-bg"></div>
+                        <div class="shadow"></div><br>
+                    </div>
+                    <!-- Add more sections for Brundavanam, Madura, etc. -->
+                    <div class="place row">
+                        <div class="place-details col-md-6">
+                            <h4> Thajiwas Glacier</h4><br>
+                            <!-- <a class="google" href="#" target="_blank">Google Map Location</a>
+                            <a href="#" target="_blank">Details</a> -->
+                        </div>
+                        <div class="place-image col-md-6">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/74/22/a0/photo7jpg.jpg?w=1600&h=-1&s=1"
+                                alt="Thajiwas Glacier" class="img-fluid">
+                        </div>
+
+                        <div class="white-bg"></div>
+                        <div class="shadow"></div><br>
+                    </div>
+                    <!-- Add more sections for Brundavanam, Madura, etc. -->
+                    <div class="place row">
+                        <div class="place-details col-md-6">
+                            <h4>Thajwas Glacier</h4><br>
+                            <!-- <a class="google" href="#" target="_blank">Google Map Location</a>
+                            <a href="#" target="_blank">Details</a> -->
+                        </div>
+                        <div class="place-image col-md-6">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/34/23/6b/another-view-of-thajwas.jpg?w=2000&h=-1&s=1"
+                                alt="Thajwas Glacier" class="img-fluid">
+                        </div>
+
+                        <div class="white-bg"></div>
+                        <div class="shadow"></div>
+                    </div>
+                    <!-- Add more sections for Brundavanam, Madura, etc. -->
+
+                </div>
+                <ul>
+                    <li style="text-align: start; font-weight: bold;">Dinner & Stay at Srinagar</li>
+                </ul>
+
+
                 <div class="row">
                     <div class="col text-center">
-                        <a href="day5.html" class="btn btn-danger">Back</a>
+                        <a href="index_page.html" class="btn btn-danger">Back</a>
                     </div>
                     <div class="col text-center">
                         <a href="day7.html" class="btn btn-primary">Next</a>
                     </div>
                 </div>
+            </div>
 
         </div>
-   </div>
+    </div>
+
 </body>
+
 </html>

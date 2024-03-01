@@ -50,11 +50,14 @@
   }
   
   .place-image {
-    width: 100%;
+    width: 95%;
     overflow: hidden;
     border-radius: 4px;
+    margin: auto;
   }
-  
+  /* .place-image:hover{
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+  } */
   .place img {
     display: block;
     width: 100%;
@@ -67,6 +70,7 @@
   
   .place img:hover {
     transform: scale(1.1);
+    
     
   }
   
@@ -97,7 +101,8 @@
 }
 .google {
   margin-top: 10px;
-}img{
+}
+img{
   box-shadow: 10px 5px 20px black;
 }
 @media only screen and (max-width: 768px) {
@@ -106,5 +111,6 @@
     width: 207px;
     height: 145px;
   }
+ 
   
 }
