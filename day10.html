@@ -1,45 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellcome To our family Trip Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="day3.css" rel="stylesheet">
     <style>
         body {
-        background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
-        background-size: cover;
-        background-position: center;
+            background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
+            background-size: cover;
+            background-position: center;
+            font-weight: bold;
         }
+
         .container {
-            display: flex;
+            /* display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100vh; */
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
+
         .card {
-            background-color: rgba(255, 255, 255, 0.5); /* Adding a semi-transparent white background for blur effect */
-            backdrop-filter: blur(10px); /* Applying the blur effect */
-            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Adding a semi-transparent white background for blur effect */
+            padding: 10px;
             border-radius: 10px;
             text-align: center;
+            background-color: aliceblue;
+            max-width: 80%;
+            /* Limit the maximum width of the card */
+            margin: auto;
+            /* Center the card horizontally */
+
         }
-        </style>
+
+        h1,
+        h2,h4 {
+            margin: 0px !important;
+            display: inline-block;
+            border-bottom: 1px solid black;
+            /* This adds a solid black line below the h1 */
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+
+            .card {
+                max-width: 95%;
+            }
+
+            .text span {
+                font-size: 12px !important;
+            }
+
+            p {
+                font-size: 12px !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="card">
-            <h1>DAY10</h1>
+            <div class="card-header">
+                <h1 style="font-weight: bold;">05-05-2024</h1>
+                <h2 style="font-weight: bold;">Location : PatanKot & jawalamukhi</h2>
+            </div>
+            <div class="card-content">
+                <div class="time">
+                    <ul style="padding-left: 0;">
+                        <li style="font-weight: bold; text-align: start; margin-bottom: 5px;">Breakfast and Checkout from Hotel.</li>
+                        <li style="font-weight: bold; text-align: start; margin-bottom: 5px;">chamudi Devi temple, 
+                            Bajeshwari Devi, jawala Mukhi Devi.</li>
+                        <li style="font-weight: bold; text-align: start;">If Possible jawala Mukhi Darsanam on 5th or 6th</li><br>
+                        <p style="padding-left: 0px;"><span style="color: red; margin-right: 5px;">NOTE:</span>So some
+                            places
+                            may be Skipped according to our Time Schedule</p>
+                    </ul>
+
+                </div>
+                <div class="places">
+                    <h1 style="align-items: start;">Places</h1>
+                    <div class="place row">
+                        <div class="place-details col-md-6">
+                            <h4>chamudi Devi Temple</h4>
+                            <a class="google" href="https://maps.app.goo.gl/LCwmNzhyDQrVEiHD7"
+                                target="_blank">Google Map Location</a>
+                            <a href="https://en.wikipedia.org/wiki/Shri_Chamunda_Devi_Mandir" target="_blank">Details</a>
+                        </div>
+                        <div class="place-image col-md-6">
+                            <img src="https://pbs.twimg.com/media/Eh76UxaXkAUHcfb.jpg"
+                                alt="chamudi devi temple" class="img-fluid">
+                        </div>
+
+                        <div class="white-bg"></div>
+                        <div class="shadow"></div><br>
+                    </div>
+                    <!-- Add more sections for Brundavanam, Madura, etc. -->
+                    <div class="place row">
+                        <div class="place-details col-md-6">
+                            <h4>Bajeshwari Devi Temple</h4>
+                            <a class="google" href="https://maps.app.goo.gl/meyZAmcQbKx6BTF19"
+                                target="_blank">Google Map Location</a>
+                            <a href="https://en.wikipedia.org/wiki/Bajreshwari_Mata_Temple,_Kangra" target="_blank">Details</a>
+                        </div>
+                        <div class="place-image col-md-6">
+                            <img src="https://www.mappls.com/explore/images/user_photos/review/original/74a769097800b3a0.jpg"
+                                alt="Bajeshwari devi temple" class="img-fluid">
+                        </div>
+
+                        <div class="white-bg"></div>
+                        <div class="shadow"></div><br>
+                    </div>
+                    <!-- Add more sections for Brundavanam, Madura, etc. -->
+                    <div class="place row">
+                        <div class="place-details col-md-6">
+                            <h4>jawala Mukhi Devi Temple</h4>
+                            <a class="google" href="https://maps.app.goo.gl/uZdpUPsHrVVSv7nv5"
+                                target="_blank">Google Map Location</a>
+                            <a href="https://jawalaji.in/" target="_blank">Details</a>
+                        </div>
+                        <div class="place-image col-md-6">
+                            <img src="https://www.haridwarrishikeshtourism.com/mussoorie-attraction/jwala-devi-temple-mussoorie.jpg" alt="jawala Mukhi devi"
+                                class="img-fluid">
+                        </div>
+
+                        <div class="white-bg"></div>
+                        <div class="shadow"></div>
+                    </div>
+                    <!-- Add more sections for Brundavanam, Madura, etc. -->
+
+                </div>
+                <ul>
+                    <li style="text-align: start; font-weight: bold;">Night Stay Near Jwala devi temple.</li>
+                </ul>
+
+
                 <div class="row">
                     <div class="col text-center">
-                        <a href="day9.html" class="btn btn-danger">Back</a>
+                        <a href="index_page.html" class="btn btn-danger">Back</a>
                     </div>
                     <div class="col text-center">
                         <a href="day11.html" class="btn btn-primary">Next</a>
                     </div>
                 </div>
+            </div>
 
         </div>
-   </div>
+    </div>
+
 </body>
+
 </html>
