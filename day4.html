@@ -1,45 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellcome To our family Trip Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="day3.css" rel="stylesheet">
     <style>
         body {
-        background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
-        background-size: cover;
-        background-position: center;
+            background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
+            background-size: cover;
+            background-position: center;
+            font-weight: bold;
         }
+
         .container {
-            display: flex;
+            /* display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100vh; */
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
+
         .card {
-            background-color: rgba(255, 255, 255, 0.5); /* Adding a semi-transparent white background for blur effect */
-            backdrop-filter: blur(10px); /* Applying the blur effect */
-            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Adding a semi-transparent white background for blur effect */
+            padding: 10px;
             border-radius: 10px;
             text-align: center;
+            background-color: aliceblue;
+            max-width: 80%;
+            /* Limit the maximum width of the card */
+            margin: auto;
+            /* Center the card horizontally */
+
         }
-        </style>
+
+        h1,
+        h2 {
+            margin: 0px !important;
+            display: inline-block;
+            border-bottom: 1px solid black;
+            /* This adds a solid black line below the h1 */
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+
+            .card {
+                max-width: 95%;
+            }
+
+            .text span {
+                font-size: 12px !important;
+            }
+
+            p {
+                font-size: 12px !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="card">
-            <h1>DAY4</h1>
+            <div class="card-header">
+                <h1 style="font-weight: bold;">29-04-2024</h1>
+                <h2 style="font-weight: bold;">Location : Amritsar</h2>
+            </div>
+            <div class="card-content">
+                <div class="time">
+                    <ul style="padding-left: 0;">
+                        <li style="font-weight: bold; text-align: start; margin-bottom: 5px;">Once reach to the amritsar
+                            check into the hotel</li>
+                        <li style="font-weight: bold; text-align: start; margin-bottom: 5px;">Breakfast After that go
+                            for the Sightseeing.</li>
+                        <li style="font-weight: bold; text-align: start;">Vist Wagah Border,Golden Temple</li><br>
+                        <p style="padding-left: 0px;"><span style="color: red; margin-right: 5px;">NOTE:</span>So some
+                            places
+                            may be Skipped according to our Time Schedule</p>
+                    </ul>
+
+                </div>
+                <div class="places">
+                    <h1 style="align-items: start;">Places</h1>
+                    <div class="place row">
+                        <div class="place-details col-md-6">
+                            <h2>Wagah Border</h2>
+                            <a class="google"
+                                href="https://www.google.com/maps/dir//31.6046423,74.5730837/@31.6046648,74.5680317,16z?entry=ttu"
+                                target="_blank">Google Map Location</a>
+
+                            <a href="https://en.wikipedia.org/wiki/Wagah" target="_blank">Details</a>
+                        </div>
+                        <div class="place-image col-md-6">
+                            <img src="https://hikerwolf.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-13-at-8.46.50-PM-3.jpeg"
+                                alt="Wagah Border" class="img-fluid">
+                        </div>
+
+                        <div class="white-bg"></div>
+                        <div class="shadow"></div><br>
+                    </div>
+                    <!-- Add more sections for Brundavanam, Madura, etc. -->
+                    <div class="place row">
+                        <div class="place-details col-md-6">
+                            <h2>Golden Temple</h2>
+                            <a class="google" href="#" target="_blank">Google Map Location</a>
+                            <a href="https://en.wikipedia.org/wiki/Golden_Temple" target="_blank">Details</a>
+                        </div>
+                        <div class="place-image col-md-6">
+                            <img src="https://globalgaz.com/wp-content/uploads/2019/09/DSC02190.jpg" alt="Golden Temple" class="img-fluid">
+                        </div>
+
+                        <div class="white-bg"></div>
+                        <div class="shadow"></div><br>
+                    </div>
+                    <!-- Add more sections for Brundavanam, Madura, etc. -->
+                    <div class="place row">
+                        <div class="place-details col-md-6">
+                            <h2>Jaliya wala bagh</h2>
+                            <a class="google" href="#" target="_blank">Google Map Location</a>
+                            <a href="https://en.wikipedia.org/wiki/Jallianwala_Bagh_massacre" target="_blank">Details</a>
+                        </div>
+                        <div class="place-image col-md-6">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Jallianwala_Bagh%2C_Amritsar_01.jpg/1200px-Jallianwala_Bagh%2C_Amritsar_01.jpg" alt="Mathura" class="img-fluid">
+                        </div>
+
+                        <div class="white-bg"></div>
+                        <div class="shadow"></div>
+                    </div>
+                    <!-- Add more sections for Brundavanam, Madura, etc. -->
+
+                </div>
+                <ul>
+                    <li style="text-align: start; font-weight: bold;">Night Bus journey to Amritsar - Start around
+                        8:00PM</li>
+                </ul>
+
+
                 <div class="row">
                     <div class="col text-center">
-                        <a href="day3.html" class="btn btn-danger">Back</a>
+                        <a href="index_page.html" class="btn btn-danger">Back</a>
                     </div>
                     <div class="col text-center">
                         <a href="day5.html" class="btn btn-primary">Next</a>
                     </div>
                 </div>
+            </div>
 
         </div>
-   </div>
+    </div>
+
 </body>
+
 </html>
