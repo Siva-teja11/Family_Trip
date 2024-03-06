@@ -102,6 +102,31 @@
             margin: 5px 20px;
             display: block;
             text-align: left;
+        }.styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 8px;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        .styled-table th {
+            background-color: #f2f2f2;
+            border: 1px solid black;
+
+        }
+
+        .styled-table tbody tr th:nth-child(even) {
+            background-color: #e1f6ff;
+            border: px solid black;
+            border-collapse: collapse;
+            text-align: start;
+            
         }
 
 
@@ -117,6 +142,14 @@
             }
 
             .text span {
+                font-size: 12px !important;
+            }
+
+            thead {
+                font-size: 12px !important;
+            }
+
+            tbody {
                 font-size: 12px !important;
             }
 
@@ -218,7 +251,233 @@
                 </div>
             </div>
             <h2>PASSENGERS LIST :</h2>
-            <img src="#" alt="Passengers list need to update" />
+            <!-- <img src="#" alt="Passengers list need to update" /> -->
+            <table class="table styled-table">
+                <thead>
+                    <tr>
+                        <th scope="col">S.No</th>
+                        <th scope="col">Names</th>
+                        <th>Coach</th>
+                        <th>Seat No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <th class="tg">B APPALARSAMMA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th class="name">P APPA RAO</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th class="name">R SARASWATHI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th class="name">R BHASKAR</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th class="name">R RENUKA </th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <th>R M KRISHNA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <th>R SUDHAKSHINA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <th>K PARVATHI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>9</th>
+                        <th>K SIVAJI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>10</th>
+                        <th>K PARAMESHWARI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>11</th>
+                        <th>V RAMA CHANDRA RAO</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>12</th>
+                        <th>V VARA LAKSHMI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>13</th>
+                        <th>S KANNA BABU</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>14</th>
+                        <th>S PADHMA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+
+                    <tr>
+                        <th>15</th>
+                        <th>A JAGGA RAO</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>16</th>
+                        <th>A VIJAYA LAKSHMI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>17</th>
+                        <th>A SIVA TEJA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+
+                    <tr>
+                        <th>18</th>
+                        <th>S PRASAD</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>19</th>
+                        <th>S HOMINI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>20</th>
+                        <th>S SUJATHA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>21</th>
+                        <th>S PYDIKONDA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>22</th>
+                        <th>S NAGAMANI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>23</th>
+                        <th>B SATISH</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>24</th>
+                        <th> B RENUKA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>25</th>
+                        <th>B SREEYA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>26</th>
+                        <th> B R DEEPTHI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>27</th>
+                        <th>S VIJAYA KUMAR</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>28</th>
+                        <th>D AMRUTHA VALLI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>29</th>
+                        <th> M KUMAR</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>30</th>
+                        <th>M ARUNA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>31</th>
+                        <th>M TUSHARIKA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>32</th>
+                        <th>M DATHRI</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>33</th>
+                        <th>CH RADHA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>34</th>
+                        <th>CH CHARAN</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+                    <tr>
+                        <th>35</th>
+                        <th> P CHAITANYA</th>
+                        <th>-</th>
+                        <th style="text-align: center;">-</th>
+                    </tr>
+
+
+                </tbody>
+            </table>
             <div class="row">
                 <div class="col text-center">
                     <a href="index_page.html" class="btn btn-danger">Back</a>
