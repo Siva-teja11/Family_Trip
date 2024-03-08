@@ -1,0 +1,135 @@
+body {
+    background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* width: min(100%,950px); */
+}
+
+.card {
+    background-color: #ffffff;
+    /* White background */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adding a subtle shadow */
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    display: block;
+    box-sizing: border-box;
+
+}
+
+a:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    color: white;
+}
+
+.gridclass {
+    display: grid;
+    place-content: center;
+}
+
+.textclass {
+    color: #000;
+    font-weight: 800;
+}
+
+.mainclass {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .card {
+        max-width: 95%;
+        margin-left: 9px;
+    }
+
+
+}
+
+/* CSS for sliding in from the right */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* CSS for sliding in from the left */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+
+
+    0% {
+        transform: scale(0);
+        /* Zoom in */
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        /* Normal size */
+        opacity: 1;
+    }
+}
+
+.mainclass {
+    opacity: 0;
+}
+
+
+
+.show-mainclass-even {
+    animation: slideInLeft 1.5s forwards;
+}
+
+.show-mainclass-odd {
+    animation: slideInRight 1.5s forwards;
+}
+
+h1 {
+    animation: zoomIn 0.5s ease forwards;
+
+}
+
+.paragraph {
+    opacity: 0;
+    animation: slideInLeft 1.5s forwards;
+    animation-delay: 0.5s;
+
+
+}
