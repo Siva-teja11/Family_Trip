@@ -8,355 +8,320 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Include Font Awesome CSS -->
-    <style>
-        body {
-            background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
-            background-size: cover;
-            background-position: center;
-        }
+    <link href="index_page.css" rel="stylesheet">
 
 
-
-        .container {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            /* width: min(100%,950px); */
-        }
-
-        .card {
-            background-color: #ffffff;
-            /* White background */
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Adding a subtle shadow */
-        }
-
-        a {
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            transition: background-color 0.3s ease;
-            display: block;
-            box-sizing: border-box;
-
-        }
-
-        a:hover {
-            background-color: #0056b3;
-            /* Darker blue on hover */
-            color: white;
-        }
-
-        .gridclass {
-            display: grid;
-            place-content: center;
-        }
-       
-        .textclass{
-            color: #000;
-            font-weight: 800;
-        }
-        .mainclass{
-            margin-bottom: 10px;
-        }
-        @media only screen and (max-width: 768px) {
-            /* For mobile phones: */
-
-            .card {
-                max-width: 95%;
-                margin-left: 9px;
-            }
-
-
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="card">
             <h1>Family Trip Index</h1>
-            <p>Explore our trip itinerary by clicking the links below:</p>
+            <p class="paragraph">Explore our trip itinerary by clicking the links below:</p>
             <hr>
-            <div class="col-md-12 mainclass">
-                <div class="row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day1 </p>
+            <div class="card-content">
+                <div class="col-md-12 mainclass">
+                    <div class="row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day1 </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day1.html">Journey From Visakhapatnam</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day2</p>
-                        </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
-                        </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day2.html">Journey From Vijayawada Junction</a>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day1.html">Journey From Visakhapatnam</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day3</p>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day2</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day3.html">Delhi</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day4</p>
-                        </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
-                        </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day4.html">Amritsar</a>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day2.html">Journey From Vijayawada Junction</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day5</p>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day3</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day5.html">Srinagar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day6</p>
-                        </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
-                        </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day6.html">Srinigar-Gulmargh</a>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day3.html">Delhi</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day7</p>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day4</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day7.html">Srinagar-Sonamargh</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day8</p>
-                        </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
-                        </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day8.html">Srinagar-Pahalgam</a>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day4.html">Amritsar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day9</p>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day5</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day9.html">katra</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day10</p>
-                        </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
-                        </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day10.html">pathankot and jwalamukhi</a>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day5.html">Srinagar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day11</p>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day6</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day11.html">jwalamukhi Temple</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day12</p>
-                        </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
-                        </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day12.html">Agra</a>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day6.html">Srinigar-Gulmargh</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day13</p>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day7</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day13.html">Journey From Delhi</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 mainclass">
-                <div class=" row justify-content-center"> <!-- Center the row horizontally -->
-                    <div class="col-3 gridclass" style="position: relative;"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="text label-column">
-                            <p>Day14</p>
-                        </div>
-                    </div>
-                    <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
-                        <div class="textclass label-column">
-                            <p>:</p>
-                        </div>
-                    </div>
-                    <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
-                        <div class="text">
-                            <a href="day14.html">Journey From Vijayawada Junction</a>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day7.html">Srinagar-Sonamargh</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div><br>
-            <div class="row">
-                <div class="col text-center">
-                    <a href="#" class="btn btn-danger">Back</a>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day8</p>
+                            </div>
+                        </div>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day8.html">Srinagar-Pahalgam</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day9</p>
+                            </div>
+                        </div>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day9.html">katra</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day10</p>
+                            </div>
+                        </div>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day10.html">pathankot and jwalamukhi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day11</p>
+                            </div>
+                        </div>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day11.html">jwalamukhi Temple</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day12</p>
+                            </div>
+                        </div>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day12.html">Agra</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day13</p>
+                            </div>
+                        </div>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day13.html">Journey From Delhi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mainclass">
+                    <div class=" row justify-content-center"> <!-- Center the row horizontally -->
+                        <div class="col-3 gridclass" style="position: relative;">
+                            <!-- Use col-md-4 for smaller screens -->
+                            <div class="text label-column">
+                                <p>Day14</p>
+                            </div>
+                        </div>
+                        <div class="col-1 gridclass"> <!-- Use col-md-4 for smaller screens -->
+                            <div class="textclass label-column">
+                                <p>:</p>
+                            </div>
+                        </div>
+                        <div class="col-8"> <!-- Use col-md-8 for smaller screens -->
+                            <div class="text">
+                                <a href="day14.html">Journey From Vijayawada Junction</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col text-center">
+                        <a href="#" class="btn btn-danger">Back</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function delaySecondLiAnimation() {
+            setTimeout(function () {
+                document.querySelector('.paragraph').style.opacity = '1';
+            }, 3000);
+        }
 
+        // Trigger the delay function when the page is fully loaded
+        window.onload = delaySecondLiAnimation;
+        window.addEventListener('scroll', function () {
+            var mainelements = document.querySelectorAll('.mainclass');
+
+            mainelements.forEach(function (element, Index) {
+                var position = element.getBoundingClientRect().top;
+                var windowHeight = window.innerHeight;
+
+                if (position < windowHeight) {
+                    if (Index % 2 === 0) {
+                        element.classList.add('show-mainclass-even');
+                    } else if (Index % 2 === 1) {
+
+                        element.classList.add('show-mainclass-odd');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
