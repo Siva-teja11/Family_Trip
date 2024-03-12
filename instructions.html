@@ -127,7 +127,7 @@
     </div>
     <script>
         // Function to be called when an observed element enters the viewport
-        function handleIntersection(entries, observer) {
+        function handleIntersections(entries, observer) {
             entries.forEach(entry => {
                 // If the element is intersecting with the viewport
                 if (entry.isIntersecting) {
@@ -151,7 +151,7 @@
         };
 
         // Create a new IntersectionObserver
-        const observer = new IntersectionObserver(handleIntersection, options);
+        const observer = new IntersectionObserver(handleIntersections, options);
 
         // Select all elements with the class 'mainclass'
         const mainelements = document.querySelectorAll('.mainclass');
@@ -160,19 +160,34 @@
         mainelements.forEach(element => {
             observer.observe(element);
         });
-        window.addEventListener('scroll', function () {
-            var mainelements = document.querySelectorAll('a');
 
-            mainelements.forEach(function (element, Index) {
-                var position = element.getBoundingClientRect().top;
-                var windowHeight = window.innerHeight;
-
-                if (position < windowHeight) {
-                    element.classList.add('show-a');
+        // Function to handle the intersection of elements with the viewport
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+                // If the element is intersecting with the viewport
+                if (entry.isIntersecting) {
+                    // Add the class to show the button
+                    entry.target.classList.add('show-a');
                 }
             });
-        });
+        }
 
+        // Options for the IntersectionObserver
+        const option = {
+            root: null, // Use the viewport as the root
+            threshold: 0.5, // Trigger when any part of the element is in view
+        };
+
+        // Create a new IntersectionObserver
+        const observers = new IntersectionObserver(handleIntersection, option);
+
+        // Select the Next and Back buttons
+        const buttons = document.querySelectorAll('a');
+
+        // Observe each button
+        buttons.forEach(button => {
+            observers.observe(button);
+        });
     </script>
 
 </body>
