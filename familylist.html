@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellcome To our family Trip Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="day3.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
+            background-size: cover;
+            background-position: center;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .container {
+            
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Adding a semi-transparent white background for blur effect */
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: aliceblue;
+            max-width: 80%;
+            /* Limit the maximum width of the card */
+            margin: auto;
+            /* Center the card horizontally */
+
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            /* Limit the maximum height of the image */
+            margin: 20px 0;
+            /* Adjust the margin for smaller screens */
+        }
+
+        h1,
+        h2,
+        h4 {
+            margin: 0px !important;
+            display: inline-block;
+            border-bottom: 1px solid black;
+            /* This adds a solid black line below the h1 */
+        }
+
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 8px;
+            border-collapse: collapse;
+            border: 1px solid black;
+            border-radius: 5px;
+
+
+        }
+
+        .styled-table tbody tr th:nth-child(even) {
+            background-color: #e1f6ff;
+            margin: 5px 20px;
+            display: flex;
+            justify-content: start;
+            border-style: inset;
+        }
+
+        .names {
+            animation: none;
+        }
+
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+
+            .card {
+                max-width: 95%;
+            }
+
+            thead {
+                font-size: 12px !important;
+            }
+
+            tbody {
+                font-size: 12px !important;
+            }
+        }
+
+        @keyframes openAnimation {
+            0% {
+                transform: scaleY(0);
+                /* Start with no height */
+            }
+
+            100% {
+                transform: scaleY(1);
+                /* End with full height */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+        <div class="card">
+            <h1 style="animation: none;">FAMILY MEMBERS LIST :</h1><br>
+            <table class="table styled-table">
+                <thead>
+                    <tr>
+                        <th scope="col">S.No</th>
+                        <th scope="col">Names</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <th class="names">B APPALARSAMMA</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th class="names">P APPA RAO</th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th class="names">R SARASWATHI</th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th class="names">R BHASKAR</th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th class="names">R RENUKA </th>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <th class="names">R M KRISHNA</th>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <th class="names">R SUDHAKSHINA</th>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <th class="names">K PARVATHI</th>
+                    </tr>
+                    <tr>
+                        <th>9</th>
+                        <th class="names">K SIVAJI</th>
+                    </tr>
+                    <tr>
+                        <th>10</th>
+                        <th class="names">K PARAMESHWARI</th>
+                    </tr>
+                    <tr>
+                        <th>11</th>
+                        <th class="names">V RAMA CHANDRA RAO</th>
+                    </tr>
+                    <tr>
+                        <th>12</th>
+                        <th class="names">V VARA LAKSHMI</th>
+                    </tr>
+                    <tr>
+                        <th>13</th>
+                        <th class="names">S KANNA BABU</th>
+                    </tr>
+                    <tr>
+                        <th>14</th>
+                        <th class="names">S PADHMA</th>
+                    </tr>
+                    <tr>
+                        <th>15</th>
+                        <th class="names">Y SRAVNI</th>
+                    </tr>
+                    <tr>
+                        <th>16</th>
+                        <th class="names">K CHAITANYA UMA SAI TEJA</th>
+                    </tr>
+                    <tr>
+                        <th>17</th>
+                        <th class="names">A JAGGA RAO</th>
+                    </tr>
+                    <tr>
+                        <th>18</th>
+                        <th class="names">A VIJAYA LAKSHMI</th>
+                    </tr>
+                    <tr>
+                        <th>19</th>
+                        <th class="names">A SIVA TEJA</th>
+                    </tr>
+                    <tr>
+                        <th>20</th>
+                        <th class="names">A BHAVANA</th>
+                    </tr>
+                    <tr>
+                        <th>21</th>
+                        <th class="names">S PRASAD</th>
+                    </tr>
+                    <tr>
+                        <th>22</th>
+                        <th class="names">S HOMINI</th>
+                    </tr>
+                    <tr>
+                        <th>23</th>
+                        <th class="names">S SUJATHA</th>
+                    </tr>
+                    <tr>
+                        <th>24</th>
+                        <th class="names">S PYDIKONDA</th>
+                    </tr>
+                    <tr>
+                        <th>25</th>
+                        <th class="names">S NAGAMANI</th>
+                    </tr>
+                    <tr>
+                        <th>26</th>
+                        <th class="names">B SATISH</th>
+                    </tr>
+                    <tr>
+                        <th>27</th>
+                        <th class="names"> B RENUKA</th>
+                    </tr>
+                    <tr>
+                        <th>28</th>
+                        <th class="names">B SREEYA</th>
+                    </tr>
+                    <tr>
+                        <th>29</th>
+                        <th class="names"> B R DEEPTHI</th>
+                    </tr>
+                    <tr>
+                        <th>30</th>
+                        <th class="names">B RANJITHA</th>
+                    </tr>
+                    <tr>
+                        <th>31</th>
+                        <th class="names">D MANIKANTA</th>
+                    </tr>
+                    <tr>
+                        <th>32</th>
+                        <th class="names">D VEENA</th>
+                    </tr>
+                    <tr>
+                        <th>33</th>
+                        <th class="names">D VENKATARAMANI</th>
+                    </tr>
+                    <tr>
+                        <th>34</th>
+                        <th class="names">S VIJAYA KUMAR</th>
+                    </tr>
+                    <tr>
+                        <th>35</th>
+                        <th class="names">D AMRUTHA VALLI</th>
+                    </tr>
+                    <tr>
+                        <th>36</th>
+                        <th class="names">M RAJENDHRA</th>
+                    </tr>
+                    <tr>
+                        <th>37</th>
+                        <th class="names">M SANTHI</th>
+                    </tr>
+                    <tr>
+                        <th>38</th>
+                        <th class="names">M PUSHKAR</th>
+                    </tr>
+                    <tr>
+                        <th>39</th>
+                        <th class="names">M THANVI</th>
+                    </tr>
+                    <tr>
+                        <th>40</th>
+                        <th class="names">M UMAMAHESHWAR RAO</th>
+                    </tr>
+                    <tr>
+                        <th>41</th>
+                        <th class="names"> M KUMAR</th>
+                    </tr>
+                    <tr>
+                        <th>42</th>
+                        <th class="names">M ARUNA</th>
+                    </tr>
+                    <tr>
+                        <th>43</th>
+                        <th class="names">M TUSHARIKA</th>
+                    </tr>
+                    <tr>
+                        <th>44</th>
+                        <th class="names">M DATHRI</th>
+                    </tr>
+                    <tr>
+                        <th>45</th>
+                        <th class="names">CH RADHA</th>
+                    </tr>
+                    <tr>
+                        <th>46</th>
+                        <th class="names">CH CHARAN</th>
+                    </tr>
+                    <tr>
+                        <th>47</th>
+                        <th class="names"> P CHAITANYA</th>
+                    </tr>
+
+
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col text-center">
+                    <a  href="index.html" class="btn btn-danger">Back</a>
+                </div>
+                <div class="col text-center">
+                    <a href="instructions.html" class="btn btn-primary">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="mater.js">
+      
+    </script>
+
+</body>
+
+</html>
