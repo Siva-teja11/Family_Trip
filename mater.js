@@ -23,62 +23,118 @@ function delaySecondLiAnimation() {
 window.onload = delaySecondLiAnimation;
 
 
-window.addEventListener('scroll', function () {
-    var images = document.querySelectorAll('.image');
 
-    images.forEach(function (image) {
-        var position = image.getBoundingClientRect().top;
-        var windowHeight = window.innerHeight;
-
-        if (position < windowHeight) {
-            image.classList.add('show-animation');
+function handleIntersectionimage(entries, observer) {
+    entries.forEach(entry => {
+        // If the element is intersecting with the viewport
+        if (entry.isIntersecting) {
+            // Add the class to show the button
+            entry.target.classList.add('show-animation');
         }
     });
+}
+
+// Options for the IntersectionObserver
+const optionimage = {
+    root: null, // Use the viewport as the root
+    threshold: 1, // Trigger when any part of the element is in view
+};
+
+// Create a new IntersectionObserver
+const observerimage = new IntersectionObserver(handleIntersectionimage, optionimage);
+
+// Select the Next and Back buttons
+const buttonimage = document.querySelectorAll('.image');
+
+// Observe each button
+buttonimage.forEach(button => {
+    observerimage.observe(button);
 });
 
 
-window.addEventListener('scroll', function () {
-    var images = document.querySelectorAll('h4');
 
-    images.forEach(function (image) {
-        var position = image.getBoundingClientRect().top;
-        var windowHeight = window.innerHeight;
-
-        if (position < windowHeight) {
-            image.classList.add('show-h4');
+function handleIntersectionh4(entries, observer) {
+    entries.forEach(entry => {
+        // If the element is intersecting with the viewport
+        if (entry.isIntersecting) {
+            // Add the class to show the button
+            entry.target.classList.add('show-h4');
         }
     });
+}
+
+// Options for the IntersectionObserver
+const optionh4 = {
+    root: null, // Use the viewport as the root
+    threshold: 0.5, // Trigger when any part of the element is in view
+};
+
+// Create a new IntersectionObserver
+const observerh4 = new IntersectionObserver(handleIntersectionh4, optionh4);
+
+// Select the Next and Back buttons
+const buttonh4 = document.querySelectorAll('h4');
+
+// Observe each button
+buttonh4.forEach(button => {
+    observerh4.observe(button);
 });
 
 
-window.addEventListener('scroll', function () {
-    var images = document.querySelectorAll('.last');
 
-    images.forEach(function (image) {
-        var position = image.getBoundingClientRect().top;
-        var windowHeight = window.innerHeight;
-
-        if (position < windowHeight) {
-            image.classList.add('show-last');
+function handleIntersectionlast(entries, observer) {
+    entries.forEach(entry => {
+        // If the element is intersecting with the viewport
+        if (entry.isIntersecting) {
+            // Add the class to show the button
+            entry.target.classList.add('show-last');
         }
-
     });
+}
 
+// Options for the IntersectionObserver
+const optionlast = {
+    root: null, // Use the viewport as the root
+    threshold: 0.5, // Trigger when any part of the element is in view
+};
 
+// Create a new IntersectionObserver
+const observerlast = new IntersectionObserver(handleIntersectionlast, optionlast);
+
+// Select the Next and Back buttons
+const buttonlast = document.querySelectorAll('.last');
+
+// Observe each button
+buttonlast.forEach(button => {
+    observerlast.observe(button);
 });
 
 
-window.addEventListener('scroll', function () {
-    var mainelements = document.querySelectorAll('a');
-
-    mainelements.forEach(function (element, Index) {
-        var position = element.getBoundingClientRect().top;
-        var windowHeight = window.innerHeight;
-
-        if (position < windowHeight) {
-            element.classList.add('show-a');
+function handleIntersections(entries, observer) {
+    entries.forEach(entry => {
+        // If the element is intersecting with the viewport
+        if (entry.isIntersecting) {
+            // Add the class to show the button
+            entry.target.classList.add('show-a');
         }
     });
+}
+
+// Options for the IntersectionObserver
+const optiona = {
+    root: null, // Use the viewport as the root
+    threshold: 0.5, // Trigger when any part of the element is in view
+};
+
+// Create a new IntersectionObserver
+const observera = new IntersectionObserver(handleIntersections, optiona);
+
+// Select the Next and Back buttons
+const buttona = document.querySelectorAll('a');
+
+// Observe each button
+buttona.forEach(button => {
+    observera.observe(button);
 });
 
 
@@ -100,9 +156,9 @@ window.addEventListener('scroll', function () {
 //     });
 // });
 
-  
-   // Function to be called when an observed element enters the viewport
-   function handleIntersection(entries, observer) {
+
+// Function to be called when an observed element enters the viewport
+function handleIntersectionn(entries, observer) {
     entries.forEach(entry => {
         // If the element is intersecting with the viewport
         if (entry.isIntersecting) {
@@ -115,18 +171,18 @@ window.addEventListener('scroll', function () {
 }
 
 // Options for the IntersectionObserver
-const option = {
+const optionn = {
     root: null, // Use the viewport as the root
     threshold: 0.5, // Trigger when 50% of the element is in view
 };
 
 // Create a new IntersectionObserver
-const observers = new IntersectionObserver(handleIntersection, option);
+const observern = new IntersectionObserver(handleIntersectionn, optionn);
 
 // Select the target element
 const names = document.querySelectorAll('.names');
 
 // Observe the target element
 names.forEach(name => {
-    observers.observe(name);
+    observern.observe(name);
 }); 
