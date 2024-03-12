@@ -2,6 +2,7 @@ body {
     background-image: url('https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=');
     background-size: cover;
     background-position: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -117,9 +118,11 @@ a:hover {
     animation: slideInLeft 1.5s forwards;
 }
 
+
 .show-mainclass-odd {
     animation: slideInRight 1.5s forwards;
 }
+
 
 h1 {
     animation: zoomIn 0.5s ease forwards;
@@ -130,6 +133,4 @@ h1 {
     opacity: 0;
     animation: slideInLeft 1.5s forwards;
     animation-delay: 0.5s;
-
-
 }

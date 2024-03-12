@@ -17,7 +17,8 @@
     <div class="container">
         <div class="card">
             <h1>Family Trip Index</h1>
-            <p class="paragraph">Explore our trip itinerary by clicking the links below:</p>
+
+            <p class="paragraph">Explore our trip itinerary by clicking the buttons below:</p>
             <hr>
             <div class="card-content">
                 <div class="col-md-12 mainclass">
@@ -289,7 +290,7 @@
                 </div><br>
                 <div class="row">
                     <div class="col text-center">
-                        <a href="#" class="btn btn-danger">Back</a>
+                        <a href="instructions.html" class="btn btn-danger">Back</a>
                     </div>
                 </div>
             </div>
@@ -304,23 +305,41 @@
 
         // Trigger the delay function when the page is fully loaded
         window.onload = delaySecondLiAnimation;
-        window.addEventListener('scroll', function () {
-            var mainelements = document.querySelectorAll('.mainclass');
-
-            mainelements.forEach(function (element, Index) {
-                var position = element.getBoundingClientRect().top;
-                var windowHeight = window.innerHeight;
-
-                if (position < windowHeight) {
-                    if (Index % 2 === 0) {
-                        element.classList.add('show-mainclass-even');
-                    } else if (Index % 2 === 1) {
-
-                        element.classList.add('show-mainclass-odd');
+        // Function to be called when an observed element enters the viewport
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+                // If the element is intersecting with the viewport
+                if (entry.isIntersecting) {
+                    // Apply the appropriate animation class based on the index
+                    const index = Array.from(entry.target.parentElement.children).indexOf(entry.target);
+                    if (index % 2 === 0) {
+                        entry.target.classList.add('show-mainclass-even');
+                    } else {
+                        entry.target.classList.add('show-mainclass-odd');
                     }
+                    // Unobserve the target element to improve performance
+                    observer.unobserve(entry.target);
                 }
             });
+        }
+
+        // Options for the IntersectionObserver
+        const options = {
+            root: null, // Use the viewport as the root
+            threshold: 0.5, // Trigger when 50% of the element is in view
+        };
+
+        // Create a new IntersectionObserver
+        const observer = new IntersectionObserver(handleIntersection, options);
+
+        // Select all elements with the class 'mainclass'
+        const mainelements = document.querySelectorAll('.mainclass');
+
+        // Observe each 'mainclass' element
+        mainelements.forEach(element => {
+            observer.observe(element);
         });
+
     </script>
 </body>
 
