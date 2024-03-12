@@ -4,25 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellcome To our family Trip Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Welcome To our Family Trip Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome CSS -->
+    <style>
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+                /* Zoom in */
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                /* Normal size */
+                opacity: 1;
+            }
+        }
+
+        .show-animation {
+            opacity: 0;
+
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 2s ease, transform 2s ease;
+        }
+
+        .fade-in-up.fade-in-up-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="card col-md-6">
-            <h2>WELCOME TO THE ITINERARY OF FAMILY TRIP</h2>
-            <p>Journey From <span class="highlight"><i class="fas fa-map-marker-alt"></i> Visakhapatnam</span> - <span class="highlight"><i class="fas fa-map-marker-alt"></i> Delhi</span></p>
-            <div class="text-end">
-                <a href="index_page.html" class="btn btn-primary next-btn">Next</a>
+            <h1 class="text"></h1>
+            <p class="show-animation" id="pa">Journey From <span class="highlight"><i class="fas fa-map-marker-alt"></i>
+                    Visakhapatnam</span>
+                - <span class="highlight"><i class="fas fa-map-marker-alt"></i> Delhi</span></p>
+            <div class="text-end fade-in-up" id="element">
+                <a href="familylist.html" class="btn btn-primary next-btn">Next</a>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script> <!-- Include Font Awesome JS -->
+    <script>
+        const div = document.querySelector(".text")
+        const text = "WELCOME TO THE ITINERARY OF FAMILY TRIP"
+
+        function textTypingEffect(element, text, i = 0) {
+            if (i === 0) {
+                element.textContent = "";
+            }
+            element.textContent += text[i];
+
+            if (i === text.length - 1) {
+                setTimeout(() => {
+                    const animations = document.querySelector(".show-animation");
+                    animations.style.opacity = "1";
+                    animations.style.animation = "zoomIn 1s ease forwards";
+                }, 1000); // Adjust the delay as needed
+
+                setTimeout(() => {
+                    document.getElementById('element').classList.add('fade-in-up-show');
+                }, 2000); // Adjust the delay as needed
+
+                return;
+            }
+
+            setTimeout(() => textTypingEffect(element, text, i + 1), 100);
+        }
+        textTypingEffect(div, text);
+    </script>
 </body>
 
 </html>
