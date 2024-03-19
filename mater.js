@@ -185,4 +185,34 @@ const names = document.querySelectorAll('.names');
 // Observe the target element
 names.forEach(name => {
     observern.observe(name);
+});
+
+
+
+
+function handleIntersectionbook(entries, observer) {
+    entries.forEach(entry => {
+        // If the element is intersecting with the viewport
+        if (entry.isIntersecting) {
+            // Add the class to show the button
+            entry.target.classList.add('show-book');
+        }
+    });
+}
+
+// Options for the IntersectionObserver
+const optionbook = {
+    root: null, // Use the viewport as the root
+    threshold: 0.5, // Trigger when any part of the element is in view
+};
+
+// Create a new IntersectionObserver
+const observerbook = new IntersectionObserver(handleIntersectionbook, optionbook);
+
+// Select the Next and Back buttons
+const buttonbook = document.querySelectorAll('.book');
+
+// Observe each button
+buttonbook.forEach(button => {
+    observerbook.observe(button);
 }); 
