@@ -216,3 +216,27 @@ const buttonbook = document.querySelectorAll('.book');
 buttonbook.forEach(button => {
     observerbook.observe(button);
 }); 
+
+
+// document.getElementById('showImage').addEventListener('click', function() {
+//     document.getElementById('imageContainer').style.display = 'block';
+//   });
+  
+//   document.getElementById('closeButton').addEventListener('click', function() {
+//     document.getElementById('imageContainer').style.display = 'none';
+//   });
+  
+
+document.querySelectorAll('.showImages').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        var imageContainer = this.parentElement.nextElementSibling;
+        imageContainer.style.display = 'block';
+    });
+});
+
+document.querySelectorAll('.closeButtons').forEach(function(button) {
+    button.addEventListener('click', function() {
+        this.parentElement.style.display = 'none';
+    });
+});
