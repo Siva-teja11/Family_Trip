@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellcome To our family Trip Website</title>
+    <title>Welcome To our family Trip Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="day3.css" rel="stylesheet">
@@ -18,31 +18,24 @@
         }
 
         .container {
-
             padding-top: 50px;
             padding-bottom: 50px;
         }
 
         .card {
             background-color: rgba(255, 255, 255, 0.5);
-            /* Adding a semi-transparent white background for blur effect */
             padding: 10px;
             border-radius: 10px;
             text-align: center;
             background-color: aliceblue;
             max-width: 80%;
-            /* Limit the maximum width of the card */
             margin: auto;
-            /* Center the card horizontally */
-
         }
 
         .card img {
             width: 100%;
             height: auto;
-            /* Limit the maximum height of the image */
             margin: 20px 0;
-            /* Adjust the margin for smaller screens */
         }
 
         h1,
@@ -51,7 +44,6 @@
             margin: 0px !important;
             display: inline-block;
             border-bottom: 1px solid black;
-            /* This adds a solid black line below the h1 */
         }
 
         .styled-table {
@@ -66,16 +58,14 @@
             border-collapse: collapse;
             border: 1px solid black;
             border-radius: 5px;
-
-
         }
 
         .styled-table tbody tr th:nth-child(even) {
             background-color: #e1f6ff;
-            margin: 5px 20px;
-            display: flex;
-            justify-content: start;
-            border-style: inset;
+            /* margin: px 20px; */
+            text-align: start;
+
+
         }
 
         .names {
@@ -83,10 +73,9 @@
         }
 
         @media only screen and (max-width: 768px) {
-            /* For mobile phones: */
-
             .card {
                 max-width: 95%;
+                overflow-x: auto;
             }
 
             thead {
@@ -109,6 +98,39 @@
                 /* End with full height */
             }
         }
+
+        .imageContainers {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 2px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .imageContainers img {
+            max-width: 100%;
+            max-height: 80vh;
+        }
+
+        .closeButtons {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -116,227 +138,830 @@
     <div class="container">
         <div class="card">
             <h1 style="animation: none;">FAMILY MEMBERS LIST</h1><br>
-            <table class="table styled-table">
-                <thead>
-                    <tr>
-                        <th scope="col">S.No</th>
-                        <th scope="col">Names</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>1</th>
-                        <th class="names">B APPALARSAMMA</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th class="names">R APPA RAO</th>
-                    </tr>
-                    <tr>
-                        <th>3</th>
-                        <th class="names">R SARASWATHI</th>
-                    </tr>
-                    <tr>
-                        <th>4</th>
-                        <th class="names">R BHASKAR</th>
-                    </tr>
-                    <tr>
-                        <th>5</th>
-                        <th class="names">R RENUKA </th>
-                    </tr>
-                    <tr>
-                        <th>6</th>
-                        <th class="names">R M KRISHNA</th>
-                    </tr>
-                    <tr>
-                        <th>7</th>
-                        <th class="names">R SUDHAKSHINA</th>
-                    </tr>
-                    <tr>
-                        <th>8</th>
-                        <th class="names">K PARVATHI</th>
-                    </tr>
-                    <tr>
-                        <th>9</th>
-                        <th class="names">K SIVAJI</th>
-                    </tr>
-                    <tr>
-                        <th>10</th>
-                        <th class="names">K PARAMESHWARI</th>
-                    </tr>
-                    <tr>
-                        <th>11</th>
-                        <th class="names">V RAMA CHANDRA RAO</th>
-                    </tr>
-                    <tr>
-                        <th>12</th>
-                        <th class="names">V VARA LAKSHMI</th>
-                    </tr>
-                    <tr>
-                        <th>13</th>
-                        <th class="names">S KANNA BABU</th>
-                    </tr>
-                    <tr>
-                        <th>14</th>
-                        <th class="names">S PADHMA</th>
-                    </tr>
-                    <tr>
-                        <th>15</th>
-                        <th class="names">Y SRAVANI</th>
-                    </tr>
-                    <tr>
-                        <th>16</th>
-                        <th class="names">K TULASI</th>
-                    </tr>
-                    <tr>
-                        <th>17</th>
-                        <th class="names">K CHAITANYA UMA SAI TEJA</th>
-                    </tr>
-                    <tr>
-                        <th>18</th>
-                        <th class="names">Y LASYA</th>
-                    </tr>
-                    <tr>
-                        <th>19</th>
-                        <th class="names">A JAGGA RAO</th>
-                    </tr>
-                    <tr>
-                        <th>20</th>
-                        <th class="names">A VIJAYA LAKSHMI</th>
-                    </tr>
-                    <tr>
-                        <th>21</th>
-                        <th class="names">A SIVA TEJA</th>
-                    </tr>
-                    <tr>
-                        <th>22</th>
-                        <th class="names">A BHAVANA</th>
-                    </tr>
-                    <tr>
-                        <th>23</th>
-                        <th class="names">S PRASAD</th>
-                    </tr>
-                    <tr>
-                        <th>24</th>
-                        <th class="names">S HOMINI</th>
-                    </tr>
-                    <tr>
-                        <th>25</th>
-                        <th class="names">S SUJATHA</th>
-                    </tr>
-                    <tr>
-                        <th>26</th>
-                        <th class="names">S PYDIKONDA</th>
-                    </tr>
-                    <tr>
-                        <th>27</th>
-                        <th class="names">S NAGAMANI</th>
-                    </tr>
-                    <tr>
-                        <th>28</th>
-                        <th class="names">B SATISH</th>
-                    </tr>
-                    <tr>
-                        <th>29</th>
-                        <th class="names"> B RENUKA</th>
-                    </tr>
-                    <tr>
-                        <th>30</th>
-                        <th class="names">B SREEYA</th>
-                    </tr>
-                    <tr>
-                        <th>31</th>
-                        <th class="names"> B R DEEPIKA</th>
-                    </tr>
-                    <tr>
-                        <th>32</th>
-                        <th class="names">B RANJITHA</th>
-                    </tr>
-                    <tr>
-                        <th>33</th>
-                        <th class="names">D MANIKANTA</th>
-                    </tr>
-                    <tr>
-                        <th>34</th>
-                        <th class="names">D VEENA</th>
-                    </tr>
-                    <tr>
-                        <th>35</th>
-                        <th class="names">D VENKATARAMANI</th>
-                    </tr>
-                    <tr>
-                        <th>36</th>
-                        <th class="names">D VIJAYA KUMAR</th>
-                    </tr>
-                    <tr>
-                        <th>37</th>
-                        <th class="names">D AMRUTHA VALLI</th>
-                    </tr>
-                    <tr>
-                        <th>38</th>
-                        <th class="names">M RAJENDHRA</th>
-                    </tr>
-                    <tr>
-                        <th>39</th>
-                        <th class="names">M SANTHI</th>
-                    </tr>
-                    <tr>
-                        <th>40</th>
-                        <th class="names">M PUSHKAR</th>
-                    </tr>
-                    <tr>
-                        <th>41</th>
-                        <th class="names">M THANVI</th>
-                    </tr>
-                    <tr>
-                        <th>42</th>
-                        <th class="names">M UMAMAHESHWAR RAO</th>
-                    </tr>
-                    <tr>
-                        <th>43</th>
-                        <th class="names"> M KUMAR</th>
-                    </tr>
-                    <tr>
-                        <th>44</th>
-                        <th class="names">M ARUNA</th>
-                    </tr>
-                    <tr>
-                        <th>45</th>
-                        <th class="names">M TUSHARIKA</th>
-                    </tr>
-                    <tr>
-                        <th>46</th>
-                        <th class="names">M VEDHA</th>
-                    </tr>
-                    <tr>
-                        <th>47</th>
-                        <th class="names">P KASIVESWARA RAO</th>
-                    </tr>
-                    <tr>
-                        <th>48</th>
-                        <th class="names">P KRISHNAVANI</th>
-                    </tr>
-                    <tr>
-                        <th>49</th>
-                        <th class="names">CH RADHA</th>
-                    </tr>
-                    <tr>
-                        <th>50</th>
-                        <th class="names">CH PRASAD</th>
-                    </tr>
-                    <tr>
-                        <th>51</th>
-                        <th class="names">CH SAI CHARAN</th>
-                    </tr>
-                    <tr>
-                        <th>52</th>
-                        <th class="names">P LAHITH</th>
-                    </tr>
-                    <tr>
-                        <th>53</th>
-                        <th class="names"> P CHAITANYA</th>
-                    </tr>
-            </table>
+            <div class="table-responsive">
+                <table class="table styled-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">S.No</th>
+                            <th scope="col">Names</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Aadhar names&Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <th class="names">B APPALARSAMMA</th>
+                            <th class="names">65</th>
+                            <th class="names">F</th>
+                            <th><div class="names">8356-6143-1671</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <th class="names">R APPA RAO</th>
+                            <th class="names">67</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <th class="names">R SARASWATHI</th>
+                            <th class="names">62</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <th class="names">R BHASKAR</th>
+                            <th class="names">42</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <th class="names">R RENUKA </th>
+                            <th class="names">36</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <th class="names">R M KRISHNA</th>
+                            <th class="names">10</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <th class="names">R SUDHAKSHINA</th>
+                            <th class="names">06</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <th class="names">K PARVATHI</th>
+                            <th class="names">58</th>
+                            <th class="names">F</th>
+                            <th><div class="names">5966-5973-3681</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>9</th>
+                            <th class="names">K SIVAJI</th>
+                            <th class="names">38</th>
+                            <th class="names">M</th>
+                            <th><div class="names">4399-5950-7295</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>10</th>
+                            <th class="names">K PARAMESHWARI</th>
+                            <th class="names">32</th>
+                            <th class="names">F</th>
+                            <th><div class="names">4990-4748-0360</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>11</th>
+                            <th class="names">V RAMA CHANDRA RAO</th>
+                            <th class="names">67</th>
+                            <th class="names">M</th>
+                            <th><div class="names">2386-7433-6045</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>12</th>
+                            <th class="names">V VARA LAKSHMI</th>
+                            <th class="names">62</th>
+                            <th class="names">F</th>
+                            <th><div class="names">9822-0357-4250</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>13</th>
+                            <th class="names">S KANNA BABU</th>
+                            <th class="names">59</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>14</th>
+                            <th class="names">S PADHMA</th>
+                            <th class="names">51</th>
+                            <th class="names">F</th>
+                            <th><div class="names">4618-8932-6529</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>15</th>
+                            <th class="names">Y SRAVANI</th>
+                            <th class="names">23</th>
+                            <th class="names">F</th>
+                            <th><div class="names">7937-1063-7292</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>16</th>
+                            <th class="names">K TULASI</th>
+                            <th class="names">49</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>17</th>
+                            <th class="names">K CHAITANYA UMA SAI TEJA</th>
+                            <th class="names">22</th>
+                            <th class="names">M</th>
+                            <th><div class="names">4040-6764-6269</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>18</th>
+                            <th class="names">Y LASYA</th>
+                            <th class="names">19</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>19</th>
+                            <th class="names">A JAGGA RAO</th>
+                            <th class="names">51</th>
+                            <th class="names">M</th>
+                            <th><div class="names">5044-2151-6104</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>20</th>
+                            <th class="names">A VIJAYA LAKSHMI</th>
+                            <th class="names">48</th>
+                            <th class="names">F</th>
+                            <th><div class="names">7761-9156-0648</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>21</th>
+                            <th class="names">A SIVA TEJA</th>
+                            <th class="names">22</th>
+                            <th class="names">M</th>
+                            <th><div class="names">3143-3839-3487</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>22</th>
+                            <th class="names">A BHAVANA</th>
+                            <th class="names">23</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>23</th>
+                            <th class="names">S PRASAD</th>
+                            <th class="names">38</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>24</th>
+                            <th class="names">S HOMINI</th>
+                            <th class="names">11</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>25</th>
+                            <th class="names">S SUJATHA</th>
+                            <th class="names">36</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>26</th>
+                            <th class="names">S PYDIKONDA</th>
+                            <th class="names">60</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>27</th>
+                            <th class="names">S NAGAMANI</th>
+                            <th class="names">58</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>28</th>
+                            <th class="names">B SATISH</th>
+                            <th class="names">45</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>29</th>
+                            <th class="names">B RENUKA</th>
+                            <th class="names">38</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>30</th>
+                            <th class="names">B SREEYA</th>
+                            <th class="names">18</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>31</th>
+                            <th class="names"> B R DEEPIKA</th>
+                            <th class="names">16</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>32</th>
+                            <th class="names">B RANJITHA</th>
+                            <th class="names">23</th>
+                            <th class="names">F</th>
+                            <th><div class="names">5723-7665-5255</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>33</th>
+                            <th class="names">D MANIKANTA</th>
+                            <th class="names">31</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>34</th>
+                            <th class="names">D VEENA</th>
+                            <th class="names">30</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>35</th>
+                            <th class="names">D VENKATARAMANI</th>
+                            <th class="names">55</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>36</th>
+                            <th class="names">D VIJAYA KUMAR</th>
+                            <th class="names">54</th>
+                            <th class="names">M</th>
+                            <th><div class="names">3986-5729-5605</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>37</th>
+                            <th class="names">D AMRUTHA VALLI</th>
+                            <th class="names">52</th>
+                            <th class="names">F</th>
+                            <th><div class="names">8481-4777-6473</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>38</th>
+                            <th class="names">M RAJENDHRA</th>
+                            <th class="names">45</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>39</th>
+                            <th class="names">M SANTHI</th>
+                            <th class="names">44</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>40</th>
+                            <th class="names">M PUSHKAR</th>
+                            <th class="names">16</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>41</th>
+                            <th class="names">M THANVI</th>
+                            <th class="names">11</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>42</th>
+                            <th class="names">M UMAMAHESHWAR RAO</th>
+                            <th class="names">70</th>
+                            <th class="names">M</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>43</th>
+                            <th class="names"> M KUMAR</th>
+                            <th class="names">42</th>
+                            <th class="names">M</th>
+                            <th><div class="names">5228-7180-9686</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="images/kumar.jpeg " alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>44</th>
+                            <th class="names">M ARUNA</th>
+                            <th class="names">38</th>
+                            <th class="names">F</th>
+                            <th><div class="names">7400-3014-0719</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>45</th>
+                            <th class="names">M TUSHARIKA</th>
+                            <th class="names">14</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>46</th>
+                            <th class="names">M VEDHA</th>
+                            <th class="names">12</th>
+                            <th class="names">F</th>
+                            <th><div class="names"></div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>47</th>
+                            <th class="names">P KASIVESWARA RAO</th>
+                            <th class="names">65</th>
+                            <th class="names">M</th>
+                            <th><div class="names">9701-6710-6255</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>48</th>
+                            <th class="names">P KRISHNAVANI</th>
+                            <th class="names">60</th>
+                            <th class="names">F</th>
+                            <th><div class="names">3473-4524-4608</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>49</th>
+                            <th class="names">CH RADHA</th>
+                            <th class="names">38</th>
+                            <th class="names">F</th>
+                            <th><div class="names">9731-9046-3552</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>50</th>
+                            <th class="names">CH PRASAD</th>
+                            <th class="names">38</th>
+                            <th class="names">M</th>
+                            <th><div class="names">7569-0378-1221</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>51</th>
+                            <th class="names">CH SAI CHARAN</th>
+                            <th class="names">14</th>
+                            <th class="names">F</th>
+                            <th><div class="names">2007-3291-7402</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>52</th>
+                            <th class="names">P LAHITH</th>
+                            <th class="names">11</th>
+                            <th class="names">M</th>
+                            <th><div class="names">6605-4749-6509</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>53</th>
+                            <th class="names"> P CHAITANYA</th>
+                            <th class="names">35</th>
+                            <th class="names">M</th>
+                            <th><div class="names">6391-3694-3416</div>
+                                <div class="linkContainer">
+                                    <a href="#" class="showImages">Aadhar card</a>
+                                </div>
+                                <div class="imageContainers">
+                                    <img src="#" alt="Example Image">
+                                    <button class="closeButtons">X</button>
+                                </div>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="row">
                 <div class="col text-center">
                     <a href="index.html" class="btn btn-danger">Back</a>
@@ -346,12 +971,9 @@
                 </div>
             </div>
         </div>
-
     </div>
     <script src="mater.js">
-
     </script>
-
 </body>
 
 </html>
