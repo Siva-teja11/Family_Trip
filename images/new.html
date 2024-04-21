@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Uploader</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    #imageContainer {
+        margin-top: 20px;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .imageWrapper {
+        position: relative;
+        width: calc(33.33% - 10px);
+        margin-bottom: 10px;
+    }
+    .imageWrapper img {
+        width: 100%;
+        display: block;
+        cursor: pointer;
+    }
+    .checkbox {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        display: none;
+    }
+    .imageWrapper:hover .checkbox {
+        display: block;
+    }
+    .checkbox:checked + .checkmark {
+        display: block;
+    }
+    .checkmark {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(44, 160, 232);
+        pointer-events: none;
+        display: none;
+    }
+    .checkmark:before {
+        content: '\2714'; /* Unicode character for checkmark */
+        font-size: 16px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <input type="file" id="imageInput" multiple>
+    <button onclick="submitImages()">Submit</button>
+    <button onclick="deleteSelected()">Delete Selected</button>
+    <button onclick="downloadSelected()">Download Selected</button>
+    <div id="imageContainer"></div>
+</div>
+
+<script>
+    function submitImages() {
+        const input = document.getElementById('imageInput');
+        const container = document.getElementById('imageContainer');
+        let images = getSavedImages(); // Get previously uploaded images
+        let currentRow = createNewRow(container);
+        let totalImages = images.length;
+
+        for (let i = 0; i < input.files.length; i++) {
+            const file = input.files[i];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const imgWrapper = document.createElement('div');
+                imgWrapper.classList.add('imageWrapper');
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                imgWrapper.appendChild(img);
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.classList.add('checkbox');
+                imgWrapper.appendChild(checkbox);
+
+                const checkmark = document.createElement('div');
+                checkmark.classList.add('checkmark');
+                imgWrapper.appendChild(checkmark);
+
+                img.addEventListener('click', function() {
+                    checkbox.checked = !checkbox.checked;
+                    checkmark.style.display = checkbox.checked ? 'block' : 'none';
+                });
+
+                currentRow.appendChild(imgWrapper);
+                totalImages++;
+                images.push(img.src); // Store image src in array
+                saveImagesToLocalStorage(images); // Save images to localStorage
+
+                // Create new row if necessary or at the end of files
+                if (totalImages % 3 === 0 || i === input.files.length - 1) {
+                    currentRow = createNewRow(container);
+                }
+            }
+
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function createNewRow(container) {
+        let row = document.createElement('div');
+        row.classList.add('row');
+        container.appendChild(row);
+        return row;
+    }
+
+    function getSavedImages() {
+        return JSON.parse(localStorage.getItem('uploadedImages')) || [];
+    }
+
+    function saveImagesToLocalStorage(images) {
+        localStorage.setItem('uploadedImages', JSON.stringify(images));
+    }
+
+    function downloadSelected() {
+        const container = document.getElementById('imageContainer');
+        const checkboxes = container.querySelectorAll('.checkbox:checked');
+
+        checkboxes.forEach(checkbox => {
+            const image = checkbox.parentNode.querySelector('img');
+            downloadImage(image.src);
+        });
+    }
+
+    function deleteSelected() {
+    console.log("Delete button clicked");
+    const container = document.getElementById('imageContainer');
+    const checkboxes = container.querySelectorAll('.checkbox:checked');
+
+    console.log("Selected checkboxes:", checkboxes);
+
+    checkboxes.forEach(checkbox => {
+        console.log("Checkbox:", checkbox);
+        const imageWrapper = checkbox.closest('.imageWrapper');
+        console.log("Image wrapper:", imageWrapper);
+        if (imageWrapper) {
+            container.removeChild(imageWrapper);
+        }
+    });
+
+    updateLocalStorage();
+}
+
+
+    function downloadImage(imageSrc) {
+        const link = document.createElement('a');
+        link.href = imageSrc;
+        link.download = 'image.jpg';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    function updateLocalStorage() {
+        const container = document.getElementById('imageContainer');
+        const images = [];
+
+        container.querySelectorAll('.imageWrapper img').forEach(img => {
+            images.push(img.src);
+        });
+
+        localStorage.setItem('uploadedImages', JSON.stringify(images));
+    }
+
+    // Display saved images on page load
+    window.addEventListener('load', function() {
+        const container = document.getElementById('imageContainer');
+        const savedImages = getSavedImages();
+        
+        if (savedImages.length > 0) {
+            let currentRow = createNewRow(container);
+            savedImages.forEach(function(imageSrc, index) {
+                const imgWrapper = document.createElement('div');
+                imgWrapper.classList.add('imageWrapper');
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                imgWrapper.appendChild(img);
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.classList.add('checkbox');
+                imgWrapper.appendChild(checkbox);
+
+                const checkmark = document.createElement('div');
+                checkmark.classList.add('checkmark');
+                imgWrapper.appendChild(checkmark);
+
+                img.addEventListener('click', function() {
+                    checkbox.checked = !checkbox.checked;
+                    checkmark.style.display = checkbox.checked ? 'block' : 'none';
+                });
+
+                currentRow.appendChild(imgWrapper);
+
+                // Create new row if necessary
+                if ((index + 1) % 3 === 0) {
+                    currentRow = createNewRow(container);
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Uploader</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    #imageContainer {
+        margin-top: 20px;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .imageWrapper {
+        width: calc(33.33% - 10px);
+        margin-bottom: 10px;
+    }
+    .imageWrapper img {
+        width: 100%;
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <input type="file" id="imageInput" multiple>
+    <button onclick="submitImages()">Submit</button>
+    <div id="imageContainer"></div>
+</div>
+
+<script>
+    function submitImages() {
+        const input = document.getElementById('imageInput');
+        const container = document.getElementById('imageContainer');
+        let images = getSavedImages(); // Get previously uploaded images
+        let currentRow = createNewRow(container);
+        let totalImages = images.length;
+
+        for (let i = 0; i < input.files.length; i++) {
+            const file = input.files[i];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const imgWrapper = document.createElement('div');
+                imgWrapper.classList.add('imageWrapper');
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                imgWrapper.appendChild(img);
+
+                currentRow.appendChild(imgWrapper);
+                totalImages++;
+                images.push(img.src); // Store image src in array
+                saveImagesToLocalStorage(images); // Save images to localStorage
+
+                // Create new row if necessary or at the end of files
+                if (totalImages % 3 === 0 || i === input.files.length - 1) {
+                    currentRow = createNewRow(container);
+                }
+            }
+
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function createNewRow(container) {
+        let row = document.createElement('div');
+        row.classList.add('row');
+        container.appendChild(row);
+        return row;
+    }
+
+    function getSavedImages() {
+        return JSON.parse(localStorage.getItem('uploadedImages')) || [];
+    }
+
+    function saveImagesToLocalStorage(images) {
+        localStorage.setItem('uploadedImages', JSON.stringify(images));
+    }
+
+    // Display saved images on page load
+    window.addEventListener('load', function() {
+        const container = document.getElementById('imageContainer');
+        const savedImages = getSavedImages();
+        
+        if (savedImages.length > 0) {
+            let currentRow = createNewRow(container);
+            savedImages.forEach(function(imageSrc, index) {
+                const imgWrapper = document.createElement('div');
+                imgWrapper.classList.add('imageWrapper');
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                imgWrapper.appendChild(img);
+                currentRow.appendChild(imgWrapper);
+
+                // Create new row if necessary
+                if ((index + 1) % 3 === 0) {
+                    currentRow = createNewRow(container);
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
